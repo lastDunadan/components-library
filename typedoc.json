@@ -1,0 +1,6 @@
+{
+  "entryPoints": ["src/docs.ts"],
+  "out": "docs",
+  "readme": "./README.md",
+  "entryPointStrategy": "expand"
+}

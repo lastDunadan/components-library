@@ -1,0 +1,4 @@
+components:
+  responses:
+    404NotFound:
+      description: The resource has not been found

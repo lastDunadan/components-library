@@ -1,0 +1,45 @@
+paths:
+  /user:
+    get:
+      description: Gets user data by id
+      parameters:
+        - in: query
+          name: id
+          required: true
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        400:
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Invalid query
+        404:
+          $ref: '#/components/responses/404NotFound'
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        name:
+          type: string
+          required: true
+        id:
+          type: number
+          required: true
+        hobbies:
+          type: array
+          required: true
+          items:
+            type: string
+      example:
+        id: 1
+        name: John Doe
+        hobbies: [ swimming, skating ]
+
+
+
